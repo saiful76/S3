@@ -1,0 +1,5 @@
+Apache Solr is popular "blazing fast open source enterprise search platform from the Apache Lucene project. Its major features include powerful full-text search, hit highlighting, faceted search, dynamic clustering, database integration, ..."
+
+This Mojolicious::Lite app is a simple search interface for the Apache Solr using JSON REST interface.
+
+The steps to get started with Solr is available here: http://lucene.apache.org/solr/tutorial.html
