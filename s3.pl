@@ -116,8 +116,8 @@ __DATA__
 % my $hits  = $result->{'response'}->{'numFound'};
 % my $start = $result->{'response'}->{'start'};
 % my $docs  = $result->{'response'}->{'docs'};
-% my $max 	= $start + $rows;
-% $max 		= $hits if $max > $hits;
+% my $max   = $start + $rows;
+% $max      = $hits if $max > $hits;
 
 <div style="display:inline;float:left;width: 45%;">
 	Showing <%= $start %> to <%= $max %> of <%= $hits %> 
