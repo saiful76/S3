@@ -1,4 +1,14 @@
 #!env perl
+#--------------------------
+# S3 :: Simple Solr Search
+#--------------------------
+# This script is meant as an example of how easy it 
+# is to create search application using Apache Solr
+# and Mojolicious::Lite. This is not meant to be used
+# in production as it is.
+# Released under the same terms as Perl itself:
+# http://dev.perl.org/licenses/artistic.html
+
 use Mojolicious::Lite;
 use constant SOLR => 'http://127.0.0.1:8983/solr';
 
@@ -8,13 +18,13 @@ get '/' => 'index';
 # Search result
 get '/search' => sub {
 	my $self = shift;
-	$self->render(template => 'index') unless $self->param('q');
+	# $self->render(template => 'index') unless $self->param('q');
 
 	my $solr = SOLR . '/select';
 
 	# Prepare the query
 	my $search = {
-		q => $self->param('q'),
+		q => $self->param('q') ? $self->param('q') : '[* TO *]', # show all
 		wt => 'json',
 		rows => $self->param('rows') ? $self->param('rows') : '10',
 		start => $self->param('start') ? $self->param('start') : '0',
