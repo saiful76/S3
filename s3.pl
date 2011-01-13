@@ -3,9 +3,10 @@
 # S3 :: Simple Solr Search
 #--------------------------
 # This script is meant as an example of how easy it 
-# is to create search application using Apache Solr
+# is to create a search application using Apache Solr
 # and Mojolicious::Lite. This is not meant to be used
-# in production as it is.
+# in production as it comes without any warranty.
+#
 # Released under the same terms as Perl itself:
 # http://dev.perl.org/licenses/artistic.html
 
