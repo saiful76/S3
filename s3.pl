@@ -31,7 +31,7 @@ get '/search' => sub {
 		start => $self->param('start') ? $self->param('start') : '0',
 		fl => $self->param('fl') ? $self->param('fl') : '*'
 	};
-	my $tx = $self->client->post_form($solr => $search);
+	my $tx = $self->ua->post_form($solr => $search);
 
 	# Search result
 	if (my $res = $tx->success) { 
